@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+
+    float gasoil;
+    float kilos;
+    
+        printf("Ingresa los litros de Gasoil:");
+    scanf("%f", &gasoil);
+    
+    kilos = (gasoil * 0.84);
+    
+    printf("%f litros de Gasoil pesan %f KG.\n", gasoil, kilos);
+    
+
+
+    return EXIT_SUCCESS;
+    }
