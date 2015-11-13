@@ -1,5 +1,5 @@
 *************************************************************************
-\#include \<Alberto Lastres.h> <\h>
+\#include \<Alberto Lastres.h> <h>
 \#include \<Here are all my c-programs.h>
 
 I started programming in October 2015 with Txemagon as teacher.
