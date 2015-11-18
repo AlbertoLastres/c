@@ -10,11 +10,7 @@
         double fin;
         double cartera;
         double cartera2;
-        char comando1[100];
 
-        
-    
-        
         
         printf("Qué desea hacer.\n");
         printf("a. Añadir Dinero a mi cartera.\n");
@@ -29,7 +25,6 @@
                 
                 
             case 'a':
-                
                 printf("Introduce cuanto dinero quieres añadir:");
                 scanf("%lf", &anadir);
                 
@@ -44,10 +39,10 @@
                 
                 pf = fopen(".cartera.txt", "w");
         
-                fprintf(pf,"%lf", *&fin);
+                fprintf(pf,"%lf", fin);
         
                 
-                printf("En total tienes: %lf€", *&fin);
+                printf("En total tienes: %lf€", fin);
                 printf("\n\n\n");
                 fclose(pf);
                 
@@ -93,6 +88,7 @@
                 fclose(pf);
                 
                 break;
+                
         }
         
 
