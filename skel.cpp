@@ -10,7 +10,7 @@
 
 
 
-	return EXIT SUCCESS;
+	return EXIT_SUCCESS;
 
 
 }
