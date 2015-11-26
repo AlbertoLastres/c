@@ -104,10 +104,10 @@
                 fflush(stdout);
                 sleep(1);
                 printf("Escribe aquí: ");
-                scanf(" lf%", &levelone);
+                scanf(" %lf", &levelone);
                 
                 pf = fopen("level/levelone.txt", "r");
-                fscanf(pf, "lf%", &levelonegood);
+                fscanf(pf, " %lf", &levelonegood);
                 
                 
              if (levelone == levelonegood){
@@ -129,7 +129,7 @@
                  sleep(0.5);
                  system("clear");
                  
-                 printf("Guarda esta contraseña!\t");
+                 printf("Guarda esta contraseña!\f");
                  printf("soylahostia\n");
                  fflush(stdout);
                  sleep(1);
