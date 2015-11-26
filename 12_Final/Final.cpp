@@ -10,7 +10,7 @@
  
             - Vamos a realizar el programa maestro, ese que demuestra que nos hemos enterado de algo en el útlimo mes.
  
-  /* Que mandamientos vamos a seguir:
+  / Que mandamientos vamos a seguir:
  
             - Entender el enunciado hasta sus ultimas consecuencias. (Todo lo que haga.)
         
@@ -21,88 +21,167 @@
             - Hacer un seguimiento. (Tampoco va a ser en papel, pero voy a desglosar todo lo que hace y como lo hace.)
  
  
-   /* ALGORITMO:
- 
-            - Imprimir un mensaje de bienvenida
-            - Imprimir un mensaje con mi Github y mi repo.
-            - Pedirle al usuario que ingrese el número de dias que le gustaría cenar fuera de casa a la semana.
-            - Escanear el número de días que introduzca y guardarlo en la variable dias.
-            - Lo multiplicamos por 2
-            - Le sumamos 5
-            - Lo multiplicamos por 50
-            - Si ya ha pasado tu cumpleaños este año, súmale 1755
-            - Si aun no ha pasado, le sumamos 1754
-            - Le restamos el año de nacimiento del usuario.
-            - El número que obtenemos siempre tendrá 3 cifras.
- 
-            - La primera cifra es la del principio.
-            - La segunda cifra es tu edad.
- 
- 
-  /* CODIGO:
-   */   int dias;
-        int siono;
-        int anio;
+   / ALGORITMO:
+   
+*/
         
-      //  - Imprimir un mensaje de bienvenida:
-        printf("Bienvenido, ponte cómodo mientras hacemos un truco de mágica.");
-        fflush(stdout);
-        sleep(1);
-        
-        printf("\n");
-        printf("Para este truco de mágia, utilizaremos conceptos matemáticos. ¿Estás preparado?");
-        printf("\n");
-      //  - Imprimir un mensaje con mi Github y mi repo.
-        printf("Mi GitHub es \"AlbertoLastres\" y la repo donde encontrarás este programa se llama \"c\"\! Disfrútalo!\:\)\!");
-        printf("\n");
-      //  - Pedirle al usuario que ingrese el número de dias que le gustaría cenar fuera de casa a la semana.
-        printf("\n ¿Cuántos días a la semana trabajas?");
-      //  - Escanear el número de días que introduzca y guardarlo en la variable dias.
-        scanf(" %i", &dias);
-      //  - Lo multiplicamos por 2
-        dias *= 2;
-      //  - Le sumamos 5
-        dias += 5;
-      //  - Lo multiplicamos por 50
-        dias *= 50;
-      //  - Preguntar si este año ha pasado ya su cumpleaños., súmale 1755
-        printf("\n Este año, ha sido ya tu cumpleaños?");
-      //  - Escanear la respuesta al cumpleaños y almacenarlo en la variable siono
-        scanf(" %s", &siono)
-      //  - Si la respuesta es que sí, le sumamos 1755.
-        if (strcmp(&siono, "si") || strcmp(&siono, "SI") || strcmp(&siono, "Si") == 0){
-            dias += 1755;
-      //  - Le preguntamos al usuario en que año ha nacido.
-            printf("\n¿En qué año has nacido?");
-      //  - Almacenamos el año recibido en la variable anio.
-            scanf(" %i", &anio);
-      //  - Le restamos el año de nacimiento a la variable dias.
-                dias -= anio;
-      //  - Mostramos el numero obtenido. La primera cifra es el numero indicado al principio. La segunda cifra es la edad.
-            printf("\nTu número de la suerte es el %i, El primer número es el que introduciste al principio, y los dos últimos son tu edad. Por cierto, felicidades atrasadas!.", dias);
-
-            
-        }
-            //  - Si la respuesta es que no, le sumamos 1754.
-                else if (strcmp(&siono, "no") || strcmp(&siono, "NO") || strcmp(&siono, "No") == 1){
-                dias += 1754;
-            //  - Le preguntamos al usuario en que año ha nacido.
-                printf("\n¿En qué año has nacido?");
-            //  - Almacenamos el año recibido en la variable anio.
-                scanf(" %i", &anio);
-            //  - Le restamos el año de nacimiento a la variable dias.
-                    dias -= anio;
-            //  - Mostramos el número obtenido. La primera cifra es el número indicado al principio. La segunda cifra es la edad.
-                    printf("\nTu número de la suerte es el %i, El primer número es el que introduciste al principio, y los dos últimos son tu edad.", dias);
-        }
-        
-        else {
-            printf("\n No te he entendido, introduce Si o No");
     
+        char menu;
+        FILE *pf;
+        double levelone;
+        double levelonegood;
+        
+        system("clear");
+      /*  system("toilet --metal -f pagga \"M\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"ME\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MEC\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECA\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECAN\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANO\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANOG\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANOGR\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANOGRA\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANOGRAF\"");
+        sleep(1);
+        system("clear");
+        system("toilet --metal -f pagga \"MECANOGRAFI\"");
+        sleep(1);
+        system("clear");
+      */  system("toilet --metal -f pagga \"MECANOGRAFIA\"");
+        
+        printf("Bienvenido al mejor juego de mecanografía!\n");
+        printf("\tSelecciona una opción!\n"); //f significa salto de página.
+        
+        printf("\t\t\t\E[1m A \E[m para jugar.\n");
+        printf("\t\t\t\E[1m B \E[m para elegir nivel.\n");
+        printf("\t\t\t\E[1m C \E[m para ver la tabla de puntuaciones.\n");
+        scanf(" %c", &menu);
+        
+        switch (menu){
+                
+                case 'a':
+                system("clear");
+                system("toilet --metal -f pagga \"Nivel 1\"");
+                fflush(stdout);
+                sleep(1);
+                printf("\n\n\n");
+                printf("Hoy se celebra un día muy especial donde todos nosotros debemos entregar algo que demuestre lo que sabemos sobre programación a Txema Gonzalez.\n\n");
+                fflush(stdout);
+                sleep(2);
+                system("toilet --metal -f pagga 3");
+                fflush(stdout);
+                sleep(1);
+                system("clear");
+                system("toilet --metal -f pagga \"Nivel 1\"");
+                printf("\n\n\n");
+                printf("Hoy se celebra un día muy especial donde todos nosotros debemos entregar algo que demuestre lo que sabemos sobre programación a Txema Gonzalez.\n\n");
+                system("toilet --metal -f pagga 2");
+                fflush(stdout);
+                sleep(1);
+                system("clear");
+                system("toilet --metal -f pagga \"Nivel 1\"");
+                printf("\n\n\n");
+                printf("Hoy se celebra un día muy especial donde todos nosotros debemos entregar algo que demuestre lo que sabemos sobre programación a Txema Gonzalez.\n\n");
+                system("toilet --metal -f pagga 1");
+                fflush(stdout);
+                sleep(1);
+                printf("Escribe aquí: ");
+                scanf(" lf%", &levelone);
+                
+                pf = fopen("level/levelone.txt", "r");
+                fscanf(pf, "lf%", &levelonegood);
+                
+                
+             if (levelone == levelonegood){
+               system("clear");
+                 system("toilet --metal -f pagga \"CORRECTO\"");
+                 fflush(stdout);
+                 sleep(0.5);
+                 system("clear");
+                 system("toilet --gay -f pagga \"CORRECTO\"");
+                 fflush(stdout);
+                 sleep(0.5);
+                 system("clear");
+                 system("toilet --metal -f pagga \"CORRECTO\"");
+                 fflush(stdout);
+                 sleep(0.5);
+                 system("clear");
+                 system("toilet --gay -f pagga \"CORRECTO\"");
+                 fflush(stdout);
+                 sleep(0.5);
+                 system("clear");
+                 
+                 printf("Guarda esta contraseña!\t");
+                 printf("soylahostia\n");
+                 fflush(stdout);
+                 sleep(1);
+                 printf("\n¿Seguimos?");
+               }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                break;
+                
+                case 'b':
+                printf("has elegido b");
+                
+                break;
+                
+                case 'c':
+                printf("has elegido c");
+                break;
         }
-
- 
-
+        
 
 	return EXIT_SUCCESS;
 
