@@ -29,7 +29,7 @@
                 scanf("%lf", &anadir);
                 
                 
-              
+                FILE *pf;
                 pf = fopen(".cartera.txt", "r+");
                 fscanf (pf, "%lf", &cartera); //Gracias Oscar
                 
