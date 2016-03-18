@@ -24,6 +24,7 @@ int main(int argc, char **argv){
     bool doexit = false;
     int tamcuadradox = 30;
     int tamcuadradoy = 30;
+    int suelo = 90;
 
     ///////CHEQUEOS///////
 
@@ -84,6 +85,7 @@ int main(int argc, char **argv){
         al_wait_for_event(eventos, &ev);
 
         if(ev.type == ALLEGRO_EVENT_TIMER) {
+            if(tamcuadradox < suelo) tamcuadradoy--;
             if(key[A]) tamcuadradox++;
             if(key[D]) tamcuadradoy--;
             redraw = true;
