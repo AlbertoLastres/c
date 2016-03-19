@@ -16,15 +16,15 @@ int main(int argc, char **argv){
     ALLEGRO_EVENT_QUEUE *eventos = NULL;
     ALLEGRO_TIMER *reloj = NULL;
     ALLEGRO_BITMAP *Cuadrado = NULL;
-    ALLEGRO_BITMAP *Palo = NULL;
-    ALLEGRO_BITMAP *Ele = NULL;
-    ALLEGRO_BITMAP *Zeta = NULL;
+//    ALLEGRO_BITMAP *Palo = NULL;
+//    ALLEGRO_BITMAP *Ele = NULL;
+//    ALLEGRO_BITMAP *Zeta = NULL;
     bool key[4] = { false, false, false, false  };
     bool redraw = true;
     bool doexit = false;
-    int tamcuadradox = 30;
-    int tamcuadradoy = 30;
-    int suelo = 90;
+    int posicionCuadradox = 50;
+    int posicionCuadradoy = 50;
+    int suelo = 400;
 
     ///////CHEQUEOS///////
 
@@ -50,7 +50,7 @@ int main(int argc, char **argv){
         al_destroy_timer(reloj);
     }
 
-    Cuadrado = al_create_bitmap(tamcuadradox, tamcuadradoy);
+    Cuadrado = al_create_bitmap(posicionCuadradox, posicionCuadradoy);
     if(!Cuadrado) {
         fprintf(stderr, "Error al crear el Cuadrado!\n");
         al_destroy_display(display);
@@ -83,11 +83,13 @@ int main(int argc, char **argv){
     {
         ALLEGRO_EVENT ev;
         al_wait_for_event(eventos, &ev);
-
+        for(int i = 0; i<techo; i++){
+        if(posicionCuadradoy < suelo) posicionCuadradoy++;
+        if(posicionCuadradoy == suelo) 
         if(ev.type == ALLEGRO_EVENT_TIMER) {
-            if(tamcuadradox < suelo) tamcuadradoy--;
-            if(key[A]) tamcuadradox++;
-            if(key[D]) tamcuadradoy--;
+
+                if(key[A]) posicionCuadradox--;
+                if(key[D]) posicionCuadradox++;
             redraw = true;
         }
         else if(ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
@@ -121,7 +123,7 @@ int main(int argc, char **argv){
             redraw = false;
 
             al_clear_to_color(al_map_rgb(0,0,0));
-            al_draw_bitmap(Cuadrado, tamcuadradox, tamcuadradoy, 0);
+            al_draw_bitmap(Cuadrado, posicionCuadradox, posicionCuadradoy, 0);
             al_flip_display();
         }
     }
