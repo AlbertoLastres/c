@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#define MAX 10
+#define ORDINALES "ordinales.txt"
+struct Informacion{
+    char Numero[4];
+    char Ordinal[MAX];
+};
+
+int main(int argc, const char **argv){
+
+    FILE *pf;
+    struct Informacion Datos[MAX];
+    bzero(Datos, MAX * sizeof(struct Informacion));
+    if (argc < 2){
+        printf("Necesito que me digas un número si no, no sé que número quieres que te puto diga en ordinal.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    if (!(pf = fopen(ORDINALES, "r+"))){
+        printf("La cagaste, no está el archivo faltan dependencias vas a palmarla pringado.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i=0; i<MAX; i++)
+        fscanf(pf, "%c\t%s", Datos[i].Numero, Datos[i].Ordinal);
+  
+    
+
+    for(int Valor = 0; Valor<MAX; Valor++){
+            if(Datos[Valor].Numero == argv[1])
+            printf("La respuesta es:%s\n", Datos[Valor].Ordinal);
+        }
+    fclose(pf);
+    int Valor = 0;
+    while(argv[1] == Datos[Valor].Numero)
+        printf("Lo tienes.");
+
+
+
+            return EXIT_SUCCESS;
+
+
+}
