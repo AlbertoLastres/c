@@ -1,0 +1,4 @@
+
+Algoritmo:
+    Establecer "Multiplicando" y "Multiplicador" en cero.
+    Dividir entre dos "Multiplicador" y multiplicar por dos "Multiplicando", si "Multiplicador" es impar, sumar multiplicando a resultado.
