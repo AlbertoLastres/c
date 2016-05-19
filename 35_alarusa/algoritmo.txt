@@ -1,4 +1,10 @@
 
-Algoritmo:
-    Establecer "Multiplicando" y "Multiplicador" en cero.
-    Dividir entre dos "Multiplicador" y multiplicar por dos "Multiplicando", si "Multiplicador" es impar, sumar multiplicando a resultado.
+   Algoritmo:
+	-Establecer "Multiplicando”, "Multiplicador" y “Resultado” en cero.
+	
+	-Repetir lo siguiente mientras “Multiplicando” sea distinto a 1:
+		-Si “Multiplicando” es impar, sumar “Multiplicador” a “Resultado”.
+		-Multiplica “Multiplicador” por dos.
+		-Divide “Multiplicando” entre dos.
+	-Cuando “Multiplicando” sea igual a 1, Suma “Multiplicador” a “Resultado”.
+	-Enseña “Resultado”.
