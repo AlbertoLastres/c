@@ -8,3 +8,4 @@
 		-Divide “Multiplicando” entre dos.
 	-Cuando “Multiplicando” sea igual a 1, Suma “Multiplicador” a “Resultado”.
 	-Enseña “Resultado”.
+
